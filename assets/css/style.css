@@ -1,0 +1,186 @@
+@charset "UTF-8";
+/*SCSS variables */
+/* Media query Desktop */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 5rem !important;
+    text-align: center;
+  }
+  h2 {
+    font-size: 2.5rem !important;
+    text-align: center;
+  }
+  h3 {
+    font-size: 1.8rem !important;
+  }
+}
+/* Media Query Tablet */
+@media (min-width: 600px) {
+  header, main, footer {
+    text-align: left;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  p {
+    font-size: 1.2em;
+  }
+}
+/* Media Query Móvil */
+@media (max-width: 599px) {
+  h1 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  p {
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  .custom-button {
+    width: 150px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  .navbar a {
+    font-size: 0.9rem;
+    text-decoration: none;
+    padding: 1rem 1rem;
+    color: #000000;
+  }
+}
+/* Header */
+/* Navbar */
+.navbar {
+  background-color: #FFFFFF;
+}
+
+.navbar a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 1rem 1rem;
+  color: #000000 !important;
+}
+
+/* No entiendo porque no me cambia a color negro */
+.dropdown-menu .dropdown-item {
+  color: #000000 !important;
+}
+
+/* Custom Buttom */
+.custom-button {
+  color: #000000;
+  background-color: #91C733;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 200px;
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.custom-button:hover {
+  background-color: #D1D1D1;
+}
+
+.custom-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer */
+.footer {
+  color: #FFFFFF;
+  background-color: #151617;
+  padding: 40px 0px;
+  font-size: 0.9rem;
+}
+
+.footer h4 {
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+}
+
+.footer a {
+  color: #adb5bd;
+  text-decoration: none;
+}
+
+/* Forms*/
+body.contact main {
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.form-container {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 20px;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+/* Body */
+body {
+  font-family: Arial, Helvetica, sans-serif !important;
+  line-height: 1.6;
+  background-color: #FFFFFF;
+  scroll-behavior: smooth;
+  color: #000000;
+  font-size: 1rem;
+}
+
+h1.main-color, h2.main-color, h3.main-color, .navbar a:hover, .footer a:hover {
+  color: #91C733 !important;
+  text-decoration: none;
+}
+
+p.black-text, li.black-text, ul.black-text {
+  color: #000000;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 1rem;
+}
+
+p.white-text, li.white-text, ul.white-text {
+  color: #FFFFFF;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 1rem;
+}
+
+/* Section: Products*/
+#products {
+  background-color: #f8f9fa;
+}/*# sourceMappingURL=style.css.map */
