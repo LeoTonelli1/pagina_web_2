@@ -136,6 +136,13 @@ body.contact main {
   width: 300px;
   margin: 20px;
 }
+.form-container .input-group {
+  position: relative;
+}
+.form-container .input-group .btn-outline-secondary:hover i {
+  color: #91C733;
+  transition: color 0.3s ease;
+}
 
 .form-container input,
 .form-container textarea,
