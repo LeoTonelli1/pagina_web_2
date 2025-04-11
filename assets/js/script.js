@@ -23,8 +23,7 @@ document.getElementById('contactForm')?.addEventListener('submit', function(even
     alert(`Thank you, ${name}! We will contact you shortly at ${email}.`);
 });
 
-
-// Detecta el scroll
+// Detect scroll
 window.addEventListener('scroll', function() {
     let navbar = document.querySelector('.navbar');
         
@@ -32,6 +31,35 @@ window.addEventListener('scroll', function() {
             navbar.classList.add('scrolled');
     } else {
             navbar.classList.remove('scrolled');
+    }
+});
+
+// Function to validate passwords
+function validatePasswords(password1, password2) {
+    if (password1 !== password2) {
+        alert('Passwords do not match. Please try again.');
+        return false;
+    }
+    return true;
+}
+
+// Registration form validation
+document.addEventListener('DOMContentLoaded', function() {
+    const registerForm = document.getElementById('registerForm');
+    
+    if (registerForm) {
+        registerForm.addEventListener('submit', function(event) {
+            const password1 = document.getElementById('password')?.value;
+            const password2 = document.getElementById('confirmPassword')?.value;
+            
+            if (password1 && password2) {
+                if (!validatePasswords(password1, password2)) {
+                    event.preventDefault();
+                    return false;
+                }
+            }
+            return true;
+        });
     }
 });
 

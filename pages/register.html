@@ -63,7 +63,7 @@
                     <div class="col-md-12 d-flex align-items-center justify-content-center">
                         <div class="form-container">
                             <h3 class="main-color">Sing up</h3>
-                            <form action="">
+                            <form id="registerForm" action="">
                                 <div class="form-group">
                                     <label for="email">Email:</label>
                                     <input type="email" class="form-control" id="email" maxlength="25">
@@ -73,8 +73,8 @@
                                     <input type="password" class="form-control" id="password" maxlength="25">
                                 </div>
                                 <div class="form-group">
-                                    <label for="password">Repeat Password:</label>
-                                    <input type="password" class="form-control" id="password" maxlength="25">
+                                    <label for="confirmPassword">Repeat Password:</label>
+                                    <input type="password" class="form-control" id="confirmPassword" maxlength="25">
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Name:</label>
@@ -88,8 +88,11 @@
                                     <label for="phoneNumber">Phone Number:</label>
                                     <input type="tel" class="form-control" id="phoneNumber" 
                                         pattern="[0-9]{9}" 
-                                        placeholder="Enter your phone number"
-                                        title="Please enter a valid 9-digit phone number">
+                                        placeholder="Enter a 9-digit phone number"
+                                        title="Please enter a valid 9-digit phone number (numbers only)"
+                                        maxlength="9"
+                                        oninvalid="this.setCustomValidity('Please enter exactly 9 digits')"
+                                        oninput="this.setCustomValidity('')">
                                 </div>
                                 <div class="form-group">
                                     <label for="birthDate">Date of Birth:</label>
