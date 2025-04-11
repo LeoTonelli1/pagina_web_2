@@ -16,3 +16,28 @@ body.contact main {
     width: 300px;
     margin: 20px;
 }
+
+.form-container input,
+.form-container textarea,
+.form-container select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.form-container input:hover,
+.form-container textarea:hover,
+.form-container select:hover {
+    border-color: $primary-color;
+}
+
+.form-container input:focus,
+.form-container textarea:focus,
+.form-container select:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 5px rgba($primary-color, 0.3);
+}
