@@ -1,38 +1,36 @@
 // Keyframes para la animación de fade-in
 @keyframes fadeIn {
-    from {
+    0% {
         opacity: 0;
         transform: translateY(20px);
     }
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-// Clase para aplicar la animación
+// Aplicar la animación a las imágenes en las cards
+.card-img-top {
+    opacity: 0;
+    will-change: opacity, transform;
+    animation: fadeIn 0.8s ease-out 0.5s forwards;
+}
+
+// Animación para otros elementos si se necesita
 .fade-in {
     opacity: 0;
     animation: fadeIn 0.8s ease-out forwards;
 }
 
-// Retraso para diferentes elementos
 .delay-1 {
-    animation-delay: 0.5s;
+    animation-delay: 0.5s !important;
 }
 
 .delay-2 {
-    animation-delay: 0.7s;
+    animation-delay: 0.7s !important;
 }
 
 .delay-3 {
-    animation-delay: 0.9s;
-}
-
-// Aplicar la animación a las imágenes en las cards
-.card {
-    .card-img-top {
-        @extend .fade-in;
-        @extend .delay-1;
-    }
+    animation-delay: 0.9s !important;
 }
