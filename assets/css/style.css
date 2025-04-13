@@ -169,6 +169,33 @@ body.contact main {
   box-shadow: 0 0 5px rgba(145, 199, 51, 0.3);
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in, .card .card-img-top {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.delay-1, .card .card-img-top {
+  animation-delay: 0.5s;
+}
+
+.delay-2 {
+  animation-delay: 0.7s;
+}
+
+.delay-3 {
+  animation-delay: 0.9s;
+}
+
 /* CSS Reset */
 * {
   margin: 0;
