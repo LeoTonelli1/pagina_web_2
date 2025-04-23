@@ -1,3 +1,26 @@
+// Configuración del Intersection Observer para animaciones
+document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+        root: null,
+        threshold: 0.1,
+        rootMargin: '50px'
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observar todos los elementos con la clase animate-on-scroll
+    document.querySelectorAll('.animate-on-scroll').forEach(element => {
+        observer.observe(element);
+    });
+});
+
 // Smooth scrolling with improved effect between sections
 function navigateTo(section) {
     document.getElementById(section).scrollIntoView({
