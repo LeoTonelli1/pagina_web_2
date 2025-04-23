@@ -202,6 +202,27 @@ body.contact main {
   animation-delay: 0.9s !important;
 }
 
+/* Contact Grid */
+.company-info {
+  background-color: #FFFFFF;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.company-info .info-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.company-info .info-grid p {
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
 /* CSS Reset */
 * {
   margin: 0;
