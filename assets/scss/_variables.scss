@@ -1,14 +1,43 @@
 /*SCSS variables */
 
-$primary-color: #91C733;
-$black-text: #000000;
-$white-text: #FFFFFF;
-$background-color: #FFFFFF;
-$products-background: #f8f9fa;
-$footer-background: #151617;
-$footer-text: #adb5bd;
-$form-background: #f8f8f8;
-$form-inner-background: #FFFFFF;
-$custom-buttom-hover: #D1D1D1;
-$shadow-color: rgba(0, 0, 0, 0.4);
-$light-shadow: rgba(0, 0, 0, 0.1);
+// Color Map
+$colors: (
+    'primary': #91C733,
+    'black': #000000,
+    'white': #FFFFFF,
+    'background': #FFFFFF,
+    'products': #f8f9fa,
+    'footer': #151617,
+    'footer-text': #adb5bd,
+    'form': #f8f8f8,
+    'form-inner': #FFFFFF,
+    'button-hover': #D1D1D1
+);
+
+// Shadow Map
+$shadows: (
+    'regular': rgba(0, 0, 0, 0.4),
+    'light': rgba(0, 0, 0, 0.1)
+);
+
+// Breakpoints Map
+$breakpoints: (
+    'mobile': 599px,
+    'tablet': 600px,
+    'desktop': 1024px
+);
+
+// Function to get colors
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+// Function to get shadows
+@function shadow($shadow-name) {
+    @return map-get($shadows, $shadow-name);
+}
+
+// Function to get breakpoints
+@function breakpoint($break) {
+    @return map-get($breakpoints, $break);
+}

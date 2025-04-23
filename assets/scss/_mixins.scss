@@ -1,0 +1,38 @@
+// Flex Center Mixin
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Card Style Mixin
+@mixin card-style {
+    background-color: color('white');
+    border-radius: 10px;
+    box-shadow: 0 2px 5px shadow('light');
+    padding: 2rem;
+}
+
+// Responsive Text Mixin
+@mixin responsive-text($mobile-size, $tablet-size, $desktop-size) {
+    font-size: $mobile-size;
+    
+    @media (min-width: breakpoint('tablet')) {
+        font-size: $tablet-size;
+    }
+    
+    @media (min-width: breakpoint('desktop')) {
+        font-size: $desktop-size;
+    }
+}
+
+// Button Base Mixin
+@mixin button-base {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+} 

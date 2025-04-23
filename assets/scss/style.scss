@@ -1,4 +1,6 @@
 @import 'variables';
+@import 'mixins';
+@import 'extends';
 @import 'mediaqueries';
 @import 'navbar';
 @import 'custombuttom';
@@ -26,34 +28,34 @@ header {
 body {
     font-family: Arial, Helvetica, sans-serif !important;
     line-height: 1.6;
-    background-color: $background-color;
+    background-color: color('background');
     scroll-behavior: smooth;
-    color: $black-text;
+    color: color('black');
     font-size: 1rem;
 }
 
 h1.main-color, h2.main-color, h3.main-color, .navbar a:hover, .footer a:hover {
-    color: $primary-color !important;
+    color: color('primary') !important;
     text-decoration: none;
 }
 
-p.black-text, li.black-text, ul.black-text {
-    color: $black-text;
-    list-style-type: none;
-    padding-left: 0;
-    margin: 1rem;
+.black-text {
+    @extend %text-base;
+    color: color('black');
 }
 
-p.white-text, li.white-text, ul.white-text {
-    color: $white-text;
-    list-style-type: none;
-    padding-left: 0;
-    margin: 1rem;
+.white-text {
+    @extend %text-base;
+    color: color('white');
 }
 
 /* Section: Products*/ 
 #products {
-    background-color: $products-background;
+    background-color: color('products');
+    
+    .card {
+        @extend %card-base;
+    }
 }
 
 
